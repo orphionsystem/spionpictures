@@ -32,40 +32,31 @@ export default function ManageArtworksPage() {
 
   const supabase = createClient()
 
+  console.log('Admin page rendered, artworks:', artworks.length)
+
   useEffect(() => {
+    console.log('useEffect triggered')
     loadArtworks()
   }, [])
 
   const loadArtworks = async () => {
     setLoading(true)
     try {
-      const { data, error } = await supabase
-        .from('artworks')
-        .select(`
-          id,
-          slug,
-          title_tr,
-          title_en,
-          artist_name,
-          base_price,
-          currency,
-          total_editions,
-          sold_editions,
-          is_published,
-          featured,
-          shopier_url,
-          artwork_images (
-            image_url,
-            is_primary
-          )
-        `)
-        .order('created_at', { ascending: false })
+      console.log('Fetching artworks...')
+      const response = await fetch('/api/admin/artworks')
+      console.log('Response status:', response.status)
+      const json = await response.json()
+      console.log('Response data:', json)
+      
+      const { artworks: data, error } = json
 
-      if (error) throw error
+      if (error) throw new Error(error)
+      
+      console.log('Admin artworks loaded:', data?.length)
       setArtworks(data || [])
     } catch (error) {
       console.error('Load error:', error)
-      alert('❌ Eserler yüklenirken hata oluştu')
+      alert('❌ Eserler yüklenirken hata oluştu: ' + (error as Error).message)
     } finally {
       setLoading(false)
     }

@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Metadata } from 'next'
-import { getSupabaseServerClient } from '@/lib/supabase/server'
+import { getSupabaseAdmin } from '@/lib/supabase/admin'
 import Image from 'next/image'
 import Link from 'next/link'
 import { formatPrice } from '@/lib/utils'
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export const revalidate = 0 // Always fetch fresh data
 
 async function getArtworks() {
-  const supabase = getSupabaseServerClient()
+  const supabase = getSupabaseAdmin()
   
   const { data: artworks, error } = await supabase
     .from('artworks')
@@ -29,6 +29,8 @@ async function getArtworks() {
     console.error('Error fetching artworks:', error)
     return []
   }
+
+  console.log('Artworks loaded:', artworks?.length, 'First images count:', artworks?.[0]?.images?.length)
 
   return artworks || []
 }
@@ -146,6 +148,8 @@ export default async function ArtworksPage() {
                             alt={primaryImage.alt_text_tr || artwork.title_tr}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            unoptimized
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center bg-gray-100">

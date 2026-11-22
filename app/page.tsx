@@ -2,7 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Hero from '@/components/home/Hero'
 import { Metadata } from 'next'
-import { getSupabaseServerClient } from '@/lib/supabase/server'
+import { getSupabaseAdmin } from '@/lib/supabase/admin'
 import Image from 'next/image'
 import Link from 'next/link'
 import { formatPrice } from '@/lib/utils'
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export const revalidate = 0
 
 async function getFeaturedArtworks() {
-  const supabase = getSupabaseServerClient()
+  const supabase = getSupabaseAdmin()
   
   const { data: artworks } = await supabase
     .from('artworks')
@@ -33,6 +33,9 @@ async function getFeaturedArtworks() {
 
 export default async function HomePage() {
   const featuredArtworks = await getFeaturedArtworks()
+  
+  console.log('Featured Artworks:', featuredArtworks.length)
+  console.log('First artwork images:', featuredArtworks[0]?.images)
 
   return (
     <>
@@ -49,6 +52,9 @@ export default async function HomePage() {
               </h2>
               <p className="text-secondarytext text-lg max-w-2xl mx-auto">
                 Spion Pictures koleksiyonundan özenle seçilmiş eserler.
+              </p>
+              <p className="text-sm text-gray-500 mt-2">
+                Debug: {featuredArtworks.length} eser yüklendi
               </p>
             </div>
             
@@ -70,6 +76,8 @@ export default async function HomePage() {
                             alt={primaryImage.alt_text_tr || artwork.title_tr}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            unoptimized
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center bg-gray-100">
