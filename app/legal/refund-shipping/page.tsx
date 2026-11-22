@@ -32,7 +32,7 @@ export default function RefundShippingPage() {
               <div className="space-y-8 text-secondarytext">
                 {/* TESLİMAT POLİTİKASI */}
                 <div className="bg-primary/5 p-6 rounded-sm border border-primary/20">
-                  <h2 className="font-display text-3xl font-bold text-primarytext mb-4">📦 Teslimat Politikası</h2>
+                  <h2 className="font-display text-3xl font-bold text-primarytext mb-4">Teslimat Politikası</h2>
                 </div>
 
                 <div>
@@ -160,7 +160,7 @@ export default function RefundShippingPage() {
 
                 {/* İADE POLİTİKASI */}
                 <div className="bg-primary/5 p-6 rounded-sm border border-primary/20 mt-12">
-                  <h2 className="font-display text-3xl font-bold text-primarytext mb-4">🔄 İade Politikası</h2>
+                  <h2 className="font-display text-3xl font-bold text-primarytext mb-4">İade Politikası</h2>
                 </div>
 
                 <div>
