@@ -1,0 +1,19 @@
+<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- SPION -->
+  <g id="spion">
+    <path d="M10 28C10 28 12 22 20 22C28 22 30 26 30 30C30 34 28 36 24 38L18 41C14 43 12 46 12 50C12 54 14 58 22 58C30 58 32 54 32 54" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42 22H52C58 22 62 26 62 32C62 38 58 42 52 42H42V22ZM42 22V58" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M72 22V58" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="72" cy="22" rx="2" ry="2" fill="#111111"/>
+    <path d="M92 22C92 22 88 22 88 26V54C88 58 92 58 92 58C92 58 96 58 96 54V26C96 22 92 22 92 22Z" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M108 22V58M108 22L126 48M126 22V58" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- PICTURES -->
+  <g id="pictures" opacity="0.7">
+    <text x="10" y="72" font-family="sans-serif" font-size="10" font-weight="600" fill="#111111" letter-spacing="2">PICTURES</text>
+  </g>
+  
+  <!-- Decorative line -->
+  <line x1="150" y1="40" x2="235" y2="40" stroke="#111111" stroke-width="1"/>
+</svg>

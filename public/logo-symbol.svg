@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- S monogram with negative space -->
+  <rect width="48" height="48" rx="4" fill="#111111"/>
+  <path d="M14 16C14 16 16 12 22 12C28 12 30 15 30 18C30 21 28 23 25 24.5L20 27C17 28.5 15 31 15 34C15 37 17 40 24 40C31 40 33 37 33 37" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="35" cy="13" r="5" fill="#FFFFFF"/>
+  <circle cx="35" cy="13" r="2" fill="#111111"/>
+</svg>

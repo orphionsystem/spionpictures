@@ -1,0 +1,22 @@
+{
+  "name": "Spion Pictures",
+  "short_name": "Spion",
+  "description": "Özgün dijital sanat eserleri. Fiziksel dünyada yaşamak için tasarlanmış koleksiyonlar.",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#111111",
+  "background_color": "#F8F8F6",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait"
+}

@@ -1,0 +1,39 @@
+
+> spion-pictures@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1116ms
+ ○ Compiling / ...
+ ✓ Compiled / in 888ms (740 modules)
+ ✓ Compiled in 86ms (298 modules)
+ GET / 200 in 1223ms
+ ✓ Compiled /admin in 189ms (741 modules)
+ GET /admin 200 in 257ms
+ ✓ Compiled /about in 116ms (745 modules)
+ GET /about 200 in 149ms
+ ✓ Compiled /_not-found in 84ms (748 modules)
+ GET /en/about 404 in 13ms
+ GET /_next/static/webpack/7c1ee5c4dc94e11c.webpack.hot-update.json 404 in 93ms
+ ✓ Compiled /admin/artworks/upload in 288ms (760 modules)
+ GET /admin/artworks/upload 200 in 271ms
+ ✓ Compiled /api/artworks in 229ms (494 modules)
+Upload error: StorageApiError: signature verification failed
+    at eval (webpack-internal:///(rsc)/./node_modules/@supabase/storage-js/dist/index.mjs:348:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  __isStorageError: true,
+  namespace: 'storage',
+  status: 400,
+  statusCode: '403',
+  code: 'AccessDenied'
+}
+ POST /api/artworks 500 in 25784ms
+ ✓ Compiled in 178ms (771 modules)
+ ✓ Compiled in 54ms (305 modules)
+[?25h
+ a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[?25h
